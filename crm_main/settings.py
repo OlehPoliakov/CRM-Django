@@ -40,11 +40,15 @@ DEFAULT_APPS = [
 ]
 
 THIRD_PARTY_APPS = [
-    
+    'crispy_forms',
+    'crispy_bootstrap5',
 ]
 
+CRISPY_TEMPLATE_PACK = 'bootstrap5'
+
 LOCAL_APPS = [
-    
+    'apps.common',
+    'apps.userprofile',
 ]
 
 INSTALLED_APPS = DEFAULT_APPS + LOCAL_APPS + THIRD_PARTY_APPS
