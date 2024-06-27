@@ -75,9 +75,13 @@
 
     <!-- Nav Item - Logout -->
     <li class="nav-item">
-        <a class="nav-link" href="#">
-        <i class="fas fa-fw fa-sign-out-alt"></i>
-        <span>Logout</span></a>
+        <form id="logoutForm" action="{% url 'logout' %}" method="post">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-link nav-link">
+                <i class="fas fa-fw fa-sign-out-alt"></i>
+                <span>Logout</span>
+            </button>
+        </form>
     </li>
 
     <!-- Divider -->

@@ -61,6 +61,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    'apps.common.middleware.NoCacheMiddleware',
 ]
 
 ROOT_URLCONF = 'crm_main.urls'
@@ -132,3 +134,5 @@ try:
     from crm_main.local_settings import *
 except ImportError:
     pass
+
+LOGIN_REDIRECT_URL = "dashboard"
